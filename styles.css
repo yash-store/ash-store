@@ -3,37 +3,57 @@ body {
     color: white;
     text-align: center;
     font-family: Arial;
+    margin: 0;
 }
 
-h1 {
-    color: #00ffcc;
-    letter-spacing: 2px;
+/* LOGO CENTER */
+img {
+    display: block;
+    margin: 20px auto;
 }
 
-p {
-    color: #aaa;
+/* TITLE CENTER */
+h1, p {
+    text-align: center;
 }
 
+/* PRODUCTS GRID */
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* EACH PRODUCT BOX */
 .product {
     background: #1a1a1a;
     border-radius: 15px;
     padding: 15px;
     margin: 15px;
-    transition: 0.3s;
+    width: 250px;   /* FIX SIZE */
+    text-align: center;
 }
 
-.product:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #00ffcc;
+/* IMAGE FIX */
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* SAME SIZE IMAGE */
+    border-radius: 10px;
 }
 
+/* PRICE */
+.product p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* BUTTON */
 button {
     background: #00ffcc;
     color: black;
     border: none;
     padding: 10px;
     border-radius: 5px;
-}
-img {
-    margin-top: 20px;
+    margin-top: 10px;
 }
