@@ -1,47 +1,31 @@
-<!DOCTYPE html>
-<html>
+body {
+    font-family: Arial;
+    background: black;
+    color: white;
+    text-align: center;
+}
 
-<head>
-    <title>Yash Clothing 🔥</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-<body>
+.product {
+    background: #222;
+    padding: 15px;
+    margin: 15px;
+    width: 200px;
+    border-radius: 10px;
+}
 
-<h1>Yash Clothing 🔥</h1>
+img {
+    width: 100%;
+}
 
-<div class="container">
-
-    <div class="product">
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-        <h3>Black T-Shirt</h3>
-        <p>₹499</p>
-        <button onclick="addToCart('Black T-Shirt',499)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
-        <h3>White T-Shirt</h3>
-        <p>₹399</p>
-        <button onclick="addToCart('White T-Shirt',399)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a">
-        <h3>Red T-Shirt</h3>
-        <p>₹599</p>
-        <button onclick="addToCart('Red T-Shirt',350)">Add to Cart</button>
-    </div>
-
-</div>
-
-<div class="cart">
-    <h2>🛒 Cart</h2>
-    <p id="items">No items</p>
-    <h3>Total: ₹<span id="total">0</span></h3>
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px;
+}
