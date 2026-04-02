@@ -1,31 +1,36 @@
 body {
-    font-family: Arial;
-    background: black;
+    background: #0f0f0f;
     color: white;
     text-align: center;
+    font-family: Arial;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+h1 {
+    color: #00ffcc;
+    letter-spacing: 2px;
+}
+
+p {
+    color: #aaa;
 }
 
 .product {
-    background: #222;
+    background: #1a1a1a;
+    border-radius: 15px;
     padding: 15px;
     margin: 15px;
-    width: 200px;
-    border-radius: 10px;
+    transition: 0.3s;
 }
 
-img {
-    width: 100%;
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffcc;
 }
 
 button {
-    background: red;
-    color: white;
+    background: #00ffcc;
+    color: black;
     border: none;
-    padding: 8px;
+    padding: 10px;
+    border-radius: 5px;
 }
