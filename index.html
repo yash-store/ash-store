@@ -41,7 +41,18 @@
     <h3>Total: ₹<span id="total">0</span></h3>
 </div>
 alert("JS Connected");
-<script src="script.js"></script>
 
+<script>
+let cart = [];
+let total = 0;
+
+function addToCart(name, price) {
+    cart.push(name);
+    total += price;
+
+    document.getElementById("items").innerText = cart.join(", ");
+    document.getElementById("total").innerText = total;
+}
+</script>
 </body>
-</html>
+
