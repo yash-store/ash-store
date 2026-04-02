@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yash T-Shirt Store</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product {
+            background: #222;
+            padding: 15px;
+            margin: 15px;
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 8px;
+            background: red;
+            color: white;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .cart {
+            margin-top: 20px;
+            padding: 15px;
+            background: #222;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Yash T-Shirt Store 👕</h1>
+
+<div class="container">
+
+    <div class="product">
+        <h3>Black T-Shirt</h3>
+        <p>₹499</p>
+        <button onclick="addToCart('Black T-Shirt',499)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h3>White T-Shirt</h3>
+        <p>₹399</p>
+        <button onclick="addToCart('White T-Shirt',399)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h3>Red T-Shirt</h3>
+        <p>₹599</p>
+        <button onclick="addToCart('Red T-Shirt',599)">Add to Cart</button>
+    </div>
+
+</div>
+
+<div class="cart">
+    <h2>🛒 Cart</h2>
+    <p id="items">No items</p>
+    <h3>Total: ₹<span id="total">0</span></h3>
+
+    <button onclick="orderNow()">Order on WhatsApp</button>
+</div>
+
+<script>
+let cart = [];
+let total = 0;
+
+function addToCart(name, price) {
+    cart.push(name);
+    total += price;
+
+    document.getElementById("items").innerText = cart.join(", ");
+    document.getElementById("total").innerText = total;
+}
+
+function orderNow() {
+    let message = "Order: " + cart.join(", ") + " | Total ₹" + total;
+
+    let phone = "917985523701"; // apna number daal
+
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
