@@ -30,7 +30,7 @@
         <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a">
         <h3>Red T-Shirt</h3>
         <p>₹599</p>
-        <button onclick="addToCart('Red T-Shirt',599)">Add to Cart</button>
+        <button onclick="addToCart('Red T-Shirt',350)">Add to Cart</button>
     </div>
 
 </div>
