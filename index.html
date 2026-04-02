@@ -56,3 +56,17 @@ function addToCart(name, price) {
 </script>
 </body>
 
+<script>
+function orderNow() {
+    let items = document.getElementById("items").innerText;
+    let total = document.getElementById("total").innerText;
+
+    let message = "Order: " + items + " | Total ₹" + total;
+
+    let phone = "7985523701"; // apna number daal
+
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+</script>
