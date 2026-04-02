@@ -1,7 +1,10 @@
-function showTime() {
-	document.getElementById('currentTime').innerHTML = new Date().toUTCString();
+let cart = [];
+let total = 0;
+
+function addToCart(name, price) {
+    cart.push(name);
+    total += price;
+
+    document.getElementById("items").innerText = cart.join(", ");
+    document.getElementById("total").innerText = total;
 }
-showTime();
-setInterval(function () {
-	showTime();
-}, 1000);
